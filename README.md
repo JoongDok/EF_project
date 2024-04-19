@@ -45,28 +45,25 @@ server.xml파일에서 docBase 절대경롤르 지정하여 이미지저장경�
 글 작성완료 시 글작성자의 이메일값이 파일이름에 포함되어 있고 작성한 내용안에 포함되어 있다면 </br>
 글 번호폴더 생성 후 글번호폴더에 파일을 복사합니다. 복사가 정상적으로 처리되었으면 임시폴더안 작성자이메일이 포함된 파일을 삭제합니다.</br>
 
-![파일처리4](https://i.esdrop.com/d/f/D6JOYU5GMF/U912ki6x4x.png)</br></br>
+![파일처리4](https://i.esdrop.com/d/f/D6JOYU5GMF/k3Y5RUtXe9.png)</br>
+##VIEW
+![파일처리5](https://i.esdrop.com/d/f/D6JOYU5GMF/zWyo0D9vB3.png)</br>
+##CONTROLLER
 글작성,수정도중 페이지를 벗어나게되면 $(window).on('beforeunload',function(){});함수를 사용하여 </br>
 더미파일을 삭제하는 방식으로 불필요한 파일이 남지않게 관리를 하였습니다.
 
 
 ### 3. 동영상 삽입
-![리뷰기능](https://i.esdrop.com/d/f/D6JOYU5GMF/rmhrfp5ynk.png)</br></br>
-상품을 클릭하면 상품상세페이지로 이동합니다.</br>
-리뷰는 상품을 구매해야지만 작성할 수 있으며 평점도 필수로 선택해야만 합니다.</br>
-한사람당 1개의 리뷰만 작성할 수 있으며 이미 작성한 리뷰가 있다면 찾기 쉽게하기위해 리뷰작성란이 사라지고 내가작성한 리뷰가 보이게끔 구성하였습니다.</br>
-내가작성한 리뷰를 클릭하면 수정, 삭제가 가능합니다.
+![동영상삽입](https://i.esdrop.com/d/f/D6JOYU5GMF/2ck8bdT9U1.png)</br></br>
+정규식을 활용하여 youtube링크의 id값을 추출한 뒤 youtube에서 지원하는 iframe용 링크형식으로 변환 후 썸머노트 내용에 추가해주는식으로 구현하였습니다.</br>
 
-### 4. 할인기능
-관리자기능중 하나인 할인관리입니다.</br>
-![할인등록](https://i.esdrop.com/d/f/D6JOYU5GMF/L1pnLBqXS8.png)</br></br>
-관리자메뉴의 상품관리를 통해 상품상세페이지에 들어가면 할인등록을 할 수 있습니다.</br>
-할인등록에는 할인율, 시작날짜, 종료날짜를 입력해야만 합니다. 등록 후 ,실질적인 할인등록은 관리자메뉴> 할인관리 탭에서 가능합니다.</br>
+### 4. AOP활용 로그인 체크
+AOP(Aspect)기능을 사용하여 특정 메서드가 실행되기 전에 로그인체크기능을 실행하게끔 구현하였습니다.</br>
+![AOP](https://i.esdrop.com/d/f/D6JOYU5GMF/KxOAKLOkMV.png)</br></br>
+@Pointcut어노테이션으로 로그인체크기능을 걸어놓을 메서드를 지정합니다.</br>
 
-![할인관리](https://i.esdrop.com/d/f/D6JOYU5GMF/djJV346v12.png)</br></br>
+![AOP2](https://i.esdrop.com/d/f/D6JOYU5GMF/oEBRYr3arC.png)</br></br>
 
-할인관리에서는 우측상단의 버튼을통해 할인일괄적용, 일괄해제가 가능합니다.
-일괄적용의 경우 현재날짜가 설정된할인의 시작,종료날짜 사이에 있으면서 적용이안된 할인이 있다면 적용시켜줍니다.
 
 ![상품할인적용](https://i.esdrop.com/d/f/D6JOYU5GMF/ZeW0rhaI3N.png)</br></br>
 
