@@ -5,7 +5,6 @@
 - [프로젝트소개](#프로젝트소개)
 - [개발내용](#개발내용)
 - [주요기능](#주요기능)
-- [시연영상](#시연영상)
 
 ## 프로젝트소개
 
@@ -48,7 +47,7 @@ server.xml파일에서 docBase 절대경롤르 지정하여 이미지저장경�
 ![파일처리4](https://i.esdrop.com/d/f/D6JOYU5GMF/k3Y5RUtXe9.png)</br>
 <b>VIEW</b></br>
 ![파일처리5](https://i.esdrop.com/d/f/D6JOYU5GMF/zWyo0D9vB3.png)</br>
-CONTROLLER</br>
+<b>CONTROLLER</b></br>
 글작성,수정도중 페이지를 벗어나게되면 $(window).on('beforeunload',function(){});함수를 사용하여 </br>
 더미파일을 삭제하는 방식으로 불필요한 파일이 남지않게 관리를 하였습니다.
 
@@ -59,18 +58,12 @@ CONTROLLER</br>
 
 ### 4. AOP활용 로그인 체크
 AOP(Aspect)기능을 사용하여 특정 메서드가 실행되기 전에 로그인체크기능을 실행하게끔 구현하였습니다.</br>
-![AOP](https://i.esdrop.com/d/f/D6JOYU5GMF/KxOAKLOkMV.png)</br></br>
+![AOP1](https://i.esdrop.com/d/f/D6JOYU5GMF/aB7BwxdJFO.png)</br></br>
 @Pointcut어노테이션으로 로그인체크기능을 걸어놓을 메서드를 지정합니다.</br>
+지정된 메서드 실행전 @Before어노테이션 메서드가 실행되고 로그인처리기능을 실행합니다.</br>
+로그인이 안되어있을 시 고의로 예외를 발생시켜 controller로 예외를 던져줍니다.</br>
 
 ![AOP2](https://i.esdrop.com/d/f/D6JOYU5GMF/oEBRYr3arC.png)</br></br>
+던져인 예외를 @ExceptionHandler 어노테이션을 활용해 로그인페이지로 이동하게끔 구현해놓았습니다.
 
-
-![상품할인적용](https://i.esdrop.com/d/f/D6JOYU5GMF/ZeW0rhaI3N.png)</br></br>
-
-상품에 할인이 적용된 모습입니다.</br></br>
-
-<h4>더 많은기능들이 있지만 자세한 설명은 시연영상 시청을 부탁드립니다.</h4>
-
-## 시연영상
-https://youtu.be/J-3O4g2vs1s
----
+![AOP3](https://i.esdrop.com/d/f/D6JOYU5GMF/ZeW0rhaI3N.png)</br></br>
