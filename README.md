@@ -67,4 +67,3 @@ AOP(Aspect)기능을 사용하여 특정 메서드가 실행되기 전에 로그
 ![AOP2](https://i.esdrop.com/d/f/D6JOYU5GMF/oEBRYr3arC.png)</br></br>
 던져인 예외를 @ExceptionHandler 어노테이션을 활용해 로그인페이지로 이동하게끔 구현해놓았습니다.
 
-![AOP3](https://i.esdrop.com/d/f/D6JOYU5GMF/ZeW0rhaI3N.png)</br></br>
